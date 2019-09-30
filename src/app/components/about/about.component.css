@@ -1,0 +1,12 @@
+.main-container {
+    margin-top: 20px;
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#about {
+    color: #3b1de4;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
