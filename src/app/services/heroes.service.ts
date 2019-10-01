@@ -61,6 +61,10 @@ export class HeroesService {
     getHeroes(): Heroe[] {
         return this.heroes;
     }
+
+    getHeroe( i:number ) {
+      return this.heroes[i];
+    }
 }
 
 export interface Heroe {

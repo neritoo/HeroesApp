@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Notable&display=swap');
+h1 {
+    color: black;
+    font-family: 'Notable', sans-serif;
+    text-shadow: 5px -5px #aaaaaa;
+}
+
+#small {
+    font-family: Roboto, sans-serif;
+}
+
+.imagen {
+    width: 25%;
+    height: 25%;
+}

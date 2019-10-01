@@ -1,0 +1,20 @@
+<div class="container m-lg-3">
+    <h1 class="animated fadeIn">{{ this.heroe.nombre | uppercase }}<small id="small">  ({{ this.heroe.aparicion | date:'y'}})</small></h1>
+    <div class="row animated fadeIn fast">
+        <div class="col-sm-4">
+            <img [src]="this.heroe.img" class="img-fluid" alt="">
+            <br><br>
+            <button (click)="volver()" class="btn btn-success btn-block">Regresar</button>
+        </div>
+
+        <div class="col-sm-8">
+            <h3>{{ this.heroe.nombre }}</h3>
+            <hr>
+            <p>{{ this.heroe.bio }}</p>
+            <div>
+                <img *ngIf="heroe.casa == 'Marvel'" class="img-fluid offset-md-5 imagen" src="../../../assets/img/marvel.jpg" alt="...">
+                <img *ngIf="heroe.casa == 'DC'" class="img-fluid offset-md-5 imagen" src="../../../assets/img/dc.jpg" alt="...">
+            </div>
+        </div>
+    </div>
+</div>
