@@ -18,8 +18,10 @@ export class NavbarComponent implements OnInit {
   }
 
   buscarHeroe( busqueda:string ){
-    this.router.navigate( ['/buscar', busqueda] );
+    if (busqueda != "") {
+      this.router.navigate( ['/buscar', busqueda] );
+    } else {
+      this.router.navigate( ['/heroes'] );
+    }
   }
-
-
 }

@@ -1,9 +1,15 @@
 <div class="container m-lg-3">
-    <h1>Buscando: <small>{{ busqueda }}</small></h1>
+    <h1>Resultado de la búsqueda: <small>{{ busqueda }}</small></h1>
     <hr>
 
+    <div *ngIf="!encontrado" class="row animated fadeIn fast">
+        <div class="col-md-12">
+            <div class="alert alert-info" role="alert">
+                <h3>No se encontraron resultados con la búsqueda: {{ this.busqueda }}</h3>
+            </div>
+        </div>
+    </div>
     <div class="card-columns">
-
         <div class="card animated fadeIn fast" *ngFor="let heroe of heroes; let i = index;">
             <img class="card-img-top img-fluid" [src]="heroe.img" alt="Card image cap">
             <div class="card-body">
