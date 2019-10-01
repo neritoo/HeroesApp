@@ -2,6 +2,11 @@ body {
     padding-bottom: 50px;
 }
 
+#cargando {
+    width: 10%;
+    height: 10%;
+}
+
 
 /*Animaciones*/
 

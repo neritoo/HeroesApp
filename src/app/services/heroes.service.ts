@@ -51,6 +51,13 @@ export class HeroesService {
           img: "assets/img/wolverine.png",
           aparicion: "1974-11-01",
           casa: "Marvel"
+        },
+        {
+          nombre: "Gatubela",
+          bio: "es un ladrona de Gotham City que normalmente usa un traje ajustado de una sola pieza y usa un látigo como arma. Originalmente fue caracterizada como una supervillana y adversaria de Batman, pero desde la década de los 90's ha aparecido en una serie que la presenta como una antiheroína, a menudo haciendo cosas incorrectas por las razones correctas. El personaje prosperó desde sus primeras apariciones, pero tuvo una pausa prolongada desde septiembre de 1954 hasta noviembre de 1966 debido a la Autoridad del Código de Cómics en desarrollo en 1954. Estas cuestiones involucraron las reglas con respecto al desarrollo y la representación de personajes femeninos que violaban los cómics, un código que ya no está en uso. En los cómics, Holly Robinson y Eiko Hasigawa adoptaron la identidad de Catwoman, aparte de Selina Kyle.",
+          img: "assets/img/catwoman.png",
+          aparicion: "1940-05-01",
+          casa: "DC"
         }
       ];
 
@@ -64,6 +71,19 @@ export class HeroesService {
 
     getHeroe( i:number ) {
       return this.heroes[i];
+    }
+
+    buscarHeroes( x:string ):Heroe[]{
+      let heroesArray:Heroe[] = [];
+      x = x.toLowerCase();
+
+      for (let heroe of this.heroes) {
+        let nombre = heroe.nombre.toLowerCase();
+        if (nombre.indexOf( x ) >= 0){
+          heroesArray.push(heroe);
+        }
+      }
+      return heroesArray;
     }
 }
 
