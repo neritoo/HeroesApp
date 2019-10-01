@@ -19,5 +19,4 @@ export class HeroesComponent {
   verHeroe( i:number ) {
     this.router.navigate( ['/heroe', i] )
   }
-
 }
